@@ -7,10 +7,13 @@
     "gcp-build": "tsc --project tsconfig.compile.json",
     "tsc": "tsc --project tsconfig.compile.json",
     "tsc:w": "tsc --project tsconfig.json -w",
-    "start": "npm run start:prod",
+    "start": "npm run start:dev",
     "start:dev": "nodemon --watch \"src/**/*.ts\" --ignore \"node_modules/**/*\" --exec ts-node src/index.ts",
     "start:prod": "cross-env NODE_ENV=production node dist/index.js",
     "bs": "npm run build && npm run start"
+  },
+  "engines": {
+    "node": "10.x.x"
   },
   "dependencies": {
     "@tsed/ajv": "5.61.0",
