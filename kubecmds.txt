@@ -16,3 +16,6 @@ kubectl get services
 minikube service myapp (or) kubectl port-forward service/myapp 6000:8083
 kubectl exec -ti <podname> bash
 kubectl scale deployments/myapp --replicas=3
+kubectl delete service myapp
+kubectl delete deployment myapp
+minikube stop
